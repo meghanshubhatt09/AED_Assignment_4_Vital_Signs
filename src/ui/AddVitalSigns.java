@@ -209,9 +209,9 @@ public class AddVitalSigns extends javax.swing.JPanel {
         try{
             int resprate = Integer.parseInt(txtRespRate.getText());
                 if (Integer.parseInt(txtRespRate.getText()) < 12 || Integer.parseInt(txtRespRate.getText()) > 16){
-            vitalsign.setIsNormal(false);
+            vitalsign.setIsNormal(false);}
             vitalsign.setRespiratoryRate(Integer.parseInt(txtRespRate.getText()));
-        }
+        
             
         }
         catch(NumberFormatException e)
@@ -223,9 +223,9 @@ public class AddVitalSigns extends javax.swing.JPanel {
          try{
             int bp = Integer.parseInt(txtBloodPressure.getText());
             if (Integer.parseInt(txtBloodPressure.getText()) < 80 || Integer.parseInt(txtBloodPressure.getText()) > 120){
-            vitalsign.setIsNormal(false);
+            vitalsign.setIsNormal(false);}
              vitalsign.setBloodPressure(Integer.parseInt(txtBloodPressure.getText()));
-        }
+        
                 
             
         }
@@ -238,9 +238,9 @@ public class AddVitalSigns extends javax.swing.JPanel {
         try{
             int pulseRate = Integer.parseInt(txtPulseRate.getText());
       if (Integer.parseInt(txtPulseRate.getText()) < 60 || Integer.parseInt(txtPulseRate.getText()) > 100){
-            vitalsign.setIsNormal(false);
+            vitalsign.setIsNormal(false);}
              vitalsign.setPulse(Integer.parseInt(txtPulseRate.getText()));
-        }
+        
                 
             
         }

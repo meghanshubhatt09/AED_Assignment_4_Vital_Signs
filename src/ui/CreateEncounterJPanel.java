@@ -58,7 +58,7 @@ public class CreateEncounterJPanel extends javax.swing.JPanel {
         row[2] = ec.getVitalSigns().getBloodPressure();
         row[3] = ec.getVitalSigns().getRespiratoryRate();
         row[4] = ec.getVitalSigns().getPulse();
-        row[5] = ec.getVitalSigns().isIsNormal();
+        row[5] = ec.getVitalSigns().isIsNormal()?"Normal":"AbNormal";
         row[6] = ec.getEncounterDate();
         
         

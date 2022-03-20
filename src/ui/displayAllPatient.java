@@ -46,7 +46,7 @@ public class displayAllPatient extends javax.swing.JPanel {
         row[2] = s.getPerson().getPhoneNumber();
         row[3] = s.getPerson().getHouse().getCommunity().getCity();
         row[4] = s.getPerson().getHouse().getCommunity();
-        row[5] = s.getEncounterHistory().get(s.getEncounterHistory().size()-1).getVitalSigns().isIsNormal();
+        row[5] = s.getEncounterHistory().get(s.getEncounterHistory().size()-1).getVitalSigns().isIsNormal()?"Normal":"AbNormal";
 
         model.addRow(row);
     }

@@ -54,23 +54,21 @@
                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="txtHouseNumber" alignment="0" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtCityName" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
-                              <Component id="txtHouseName" linkSize="1" alignment="1" pref="118" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="txtHouseAddress" linkSize="1" max="32767" attributes="0"/>
+                      <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtCityName" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="txtHouseNumber" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="txtHouseName" linkSize="1" pref="118" max="32767" attributes="0"/>
+                          <Component id="txtHouseAddress" linkSize="1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="txtCommunityName" min="-2" pref="176" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="135" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="127" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">

@@ -56,7 +56,7 @@ public class OverviewPanel extends javax.swing.JPanel {
         row[1] = p.getPerson().getFullName();
         row[2] = p.getPerson().getHouse().getCommunity().getCity();
         row[3] = p.getPerson().getHouse().getCommunity().getCommunityName();
-        row[4] = p.getEncounterHistory().get(p.getEncounterHistory().size()-1).getVitalSigns().isIsNormal();
+        row[4] = p.getEncounterHistory().get(p.getEncounterHistory().size()-1).getVitalSigns().isIsNormal()?"Normal":"AbNormal";
         model.addRow(row);
         
         }}
@@ -177,22 +177,44 @@ public class OverviewPanel extends javax.swing.JPanel {
 
     private void fillCombo() {
         // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        
+        ArrayList<String> mycity = new ArrayList<String>();
+        ArrayList<String> mycommunity = new ArrayList<String>();
         
         for (Patient p : patientDirectory.getPatientList()){
         if (!p.getEncounterHistory().get(p.getEncounterHistory().size()-1).getVitalSigns().isIsNormal()){
-            cityCombo.addItem(p.getPerson().getHouse().getCommunity().getCity());
+            
+            if (!mycity.contains(p.getPerson().getHouse().getCommunity().getCity())){
+                mycity.add(p.getPerson().getHouse().getCommunity().getCity());
+            }
+            
+            //cityCombo.addItem(p.getPerson().getHouse().getCommunity().getCity());
+            
+        }}
+        
+        for(String m : mycity){
+            cityCombo.addItem(m);
+        }
+        
+        
+        
+        
+        
+        for (Patient p : patientDirectory.getPatientList()){
+        if (!p.getEncounterHistory().get(p.getEncounterHistory().size()-1).getVitalSigns().isIsNormal())
+        {
+                if (!mycommunity.contains(p.getPerson().getHouse().getCommunity().getCommunityName())){
+                mycommunity.add(p.getPerson().getHouse().getCommunity().getCommunityName());
+            }
+            //communityCombo.addItem(p.getPerson().getHouse().getCommunity().getCommunityName());
             
         }
         }
         
+        for(String m : mycommunity){
+            communityCombo.addItem(m);
+        }
         
-        for (Patient p : patientDirectory.getPatientList()){
-        if (!p.getEncounterHistory().get(p.getEncounterHistory().size()-1).getVitalSigns().isIsNormal()){
-            communityCombo.addItem(p.getPerson().getHouse().getCommunity().getCommunityName());
-            
-        }
-        }
+        
         
     }
 

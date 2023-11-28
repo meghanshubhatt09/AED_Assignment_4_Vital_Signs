@@ -4,6 +4,7 @@
  */
 package model;
 
+import io.github.pixee.security.ObjectInputFilters;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -64,6 +65,7 @@ public class PersonDirectory {
             try{
             FileInputStream file = new FileInputStream("peopleDirectory.dat");
             ObjectInputStream input = new ObjectInputStream(file);
+            ObjectInputFilters.enableObjectFilterIfUnprotected(input);
             boolean endoffile = false;
             
             while (!endoffile){

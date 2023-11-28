@@ -4,6 +4,7 @@
  */
 package model;
 
+import io.github.pixee.security.ObjectInputFilters;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -79,6 +80,7 @@ public class PatientDirectory {
         try {
             FileInputStream inn = new FileInputStream("PatientDirectory.txt");
             ObjectInputStream inObj = new ObjectInputStream(inn);
+            ObjectInputFilters.enableObjectFilterIfUnprotected(inObj);
             boolean fileEnd = false;
 
             while (!fileEnd) {

@@ -4,6 +4,7 @@
  */
 package model;
 import java.io.Serializable;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -18,7 +19,7 @@ public class Person implements Serializable {
     private String gender;
     private long phoneNumber;
     private int age;
-    static final Random rand = new Random();
+    static final Random rand = new SecureRandom();
     //static final AtomicLong NEXT_ID =  new AtomicLong(0);
     //PersonDirectory personDirectory;
     private long personId = rand.nextInt(9999999);//NEXT_ID.getAndIncrement();
